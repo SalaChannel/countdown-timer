@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>カウントダウン</title>
+  <meta name="theme-color" content="#f4f6f8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#101418" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="カウントダウン">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="icon" type="image/png" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="cards" id="cards" aria-label="タイマー一覧"></section>
+
+    <section class="editor" aria-label="タイマー設定">
+      <div class="tabs" role="tablist" id="tabs">
+        <button type="button" role="tab" data-slot="0">タイマー1</button>
+        <button type="button" role="tab" data-slot="1">タイマー2</button>
+        <button type="button" role="tab" data-slot="2">タイマー3</button>
+      </div>
+      <input id="label" type="text" maxlength="20" placeholder="名前（20文字まで）" autocomplete="off" aria-label="名前">
+      <input id="target" type="datetime-local" aria-label="目標日時">
+      <div class="actions">
+        <button type="button" id="clear" class="btn">クリア</button>
+        <button type="button" id="save" class="btn primary">保存</button>
+      </div>
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

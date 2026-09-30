@@ -1,0 +1,11 @@
+{
+  "name": "countdown-timer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "iPhone向けカウントダウンタイマー（GitHub Pages公開）",
+  "scripts": {
+    "test": "node --test",
+    "icons": "node scripts/gen-icons.mjs"
+  }
+}
